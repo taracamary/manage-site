@@ -25,7 +25,8 @@ Built as a showcase of modern frontend tooling and best practices, Manage demons
 - **SCSS** for structured, maintainable styles  
 - **PostCSS** (Autoprefixer) for cross-browser support  
 - **Custom Design Tokens** (Color palette, Font sizing and weight scales , Font family definitions via `@font-face` )  
-- **CSS Layout**: Flexbox, Grid, multi-column layouts  
+- **CSS Layout**: Flexbox, Grid, multi-column layouts
+- **Semantic Class Naming** by BEM-style conventions for clear, maintainable markup
 - **Handlebars** for HTML templating  
 - **Yarn** as package manager  
 - **Font Awesome** for icons  
