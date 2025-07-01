@@ -1,17 +1,8 @@
-/* Color pallet */
-/* Font size */
-/* Font weight */
-/* Font family */
-/* Design styling */
-/* Media breakpoint */
-/*
-  key points: 576 - xs, 768 -sm , 992 - md, 1200 - lg
-*/
-font-face {
+@font-face {
   font-family: "Maven Pro", sans-serif;
   font-style: normal;
   font-weight: 500;
-  src: local("Maven Pro"), url(../../content/fonts/website/mavenpro/Mavenpromedium.woff2?v=310b0447da4417fdedbcd159cc1c2d7d) format("woff2"), url(../../content/fonts/website/mavenpro/Mavenpromedium.woff?v=0a37a7fca0bd3dd65d965bd20efd66db) format("woff");
+  src: local("Maven Pro"), url(../fonts/website/mavenpro/Mavenpromedium.woff2?v=310b0447da4417fdedbcd159cc1c2d7d) format("woff2"), url(../fonts/website/mavenpro/Mavenpromedium.woff?v=0a37a7fca0bd3dd65d965bd20efd66db) format("woff");
   font-display: swap;
 }
 
@@ -19,19 +10,17 @@ font-face {
   font-family: "Maven Pro", sans-serif;
   font-style: normal;
   font-weight: 700;
-  src: local("Maven Pro"), url(../../content/fonts/website/mavenpro/Mavenprobold.woff2?v=5f31b76e4f4c712e04114cbb61aef60c) format("woff2"), url(../../content/fonts/website/mavenpro/Mavenprobold.woff?v=361227f62af0e427e4009b321a90d94d) format("woff");
+  src: local("Maven Pro"), url(../fonts/website/mavenpro/Mavenprobold.woff2?v=5f31b76e4f4c712e04114cbb61aef60c) format("woff2"), url(../fonts/website/mavenpro/Mavenprobold.woff?v=361227f62af0e427e4009b321a90d94d) format("woff");
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 700;
-  src: local("Montserrat"), url(../../content/fonts/website/montserrat/montserratbold.woff2?v=17e6c37553461fa3c981ccd773c98935) format("woff2"), url(../../content/fonts/website/montserrat/montserratbold.woff?v=2cb4b4667df8cb2beb27e722ce8acfbb) format("woff");
+  src: local("Montserrat"), url(../fonts/website/montserrat/montserratbold.woff2?v=17e6c37553461fa3c981ccd773c98935) format("woff2"), url(../fonts/website/montserrat/montserratbold.woff?v=2cb4b4667df8cb2beb27e722ce8acfbb) format("woff");
   font-display: swap;
 }
-/*
-  key points: 576 - xs, 768 -sm , 992 - md, 1200 - lg
-*/
+
 *,
 *::before,
 *::after {
@@ -123,8 +112,6 @@ fieldset {
   outline: none;
 }
 
-/* Page layout */
-/* Component layout */
 .cards {
   -webkit-columns: 4 263px;
      -moz-columns: 4 263px;
@@ -664,7 +651,7 @@ fieldset {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background: #e7e7ea url(../../content/images/website/arrow.svg?v=8008f9162e554aa66ba653b806a6467c) calc(100% - 4px) 4px no-repeat;
+  background: #e7e7ea url(../images/website/arrow.svg?v=8008f9162e554aa66ba653b806a6467c) calc(100% - 4px) 4px no-repeat;
   border: none;
   border-radius: 2px;
   color: #6e6e6e;
@@ -730,7 +717,7 @@ fieldset {
   font-size: inherit;
   font-weight: inherit;
   text-transform: capitalize;
-  background: url(../../content/images/website/search.svg?v=fb4dfd65e37e4121d37ba7cd6bf95f74) 0% center/24px 24px no-repeat transparent;
+  background: url(../images/website/search.svg?v=fb4dfd65e37e4121d37ba7cd6bf95f74) 0% center/24px 24px no-repeat transparent;
   border: none;
   border-bottom: 1px solid #e7e7ea;
   color: #6e6e6e;
@@ -803,4 +790,3 @@ fieldset {
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
-/*# sourceMappingURL=styles.css.map*/
