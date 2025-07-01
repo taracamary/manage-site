@@ -4,12 +4,14 @@
   "version": "1.0.0",
   "author": "Mariya Kapiturko",
   "license": "UNLICENSED",
-  "private": true,
+  "private": false,
   "keywords": [],
   "repository": {},
   "scripts": {
+    "start-dev-server": "--progress --colors --open --watch --host 0.0.0.0",
     "build-website": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack --config ./webpack/configs --env.prod --progress --colors",
-    "start-dev-server": "webpack-dev-server --config ./webpack/configs --progress --colors --open --watch --host 0.0.0.0",
+    "postbuild": "mv dist/HomePage.html dist/index.html",
+    "predeploy": "yarn run build-website",
     "deploy": "gh-pages -d dist"
   },
   "babel": {
