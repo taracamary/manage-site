@@ -1,0 +1,82 @@
+<section class="cards container">
+  <h2 class="visually-hidden">Cards</h2>
+
+  <button type="button" class="cards__add-button reset-button">
+    <span class="fa-solid fa-plus fa-3x"></span>
+  </button>
+
+  {{> ./card-item/card-item
+    card-size="large"
+    card-bg="white"
+    card-image="true"
+    image-large="true"
+    image-link="../src/images/cards/cards-image-1.jpg"
+    title-text="Vacation"
+    date-time="2019-05-10"
+    date="10-05-2019"
+  }}
+
+  {{> ./card-item/card-item
+    card-size="large"
+    card-bg="white"
+    card-image="true"
+    image-large="true"
+    image-link="../src/images/cards/cards-image-2.jpg"
+    title-text="Cinema"
+    date-time="2019-05-11"
+    date="11/05/2019"
+    card-time="true"
+    time="7pm"
+  }}
+
+  {{> ./card-item/card-item
+    card-size="small"
+    card-bg="white"
+    period-text="7am - 8am"
+    title-text="Doctor"
+    date-time="2019-05-11"
+    date="11/05/2019"
+  }}
+
+  {{> ./card-item/card-item
+    card-size="small"
+    card-bg="pink"
+    period-text="9am - 10am"
+    title-text="Meeting"
+    date-time="2019-05-11"
+    date="11/05/2019"
+  }}
+
+  {{> ./card-item/card-item
+    card-size="large"
+    card-bg="white"
+    card-image="true"
+    image-large="true"
+    image-link="../src/images/cards/cards-image-3.jpg"
+    title-text="Family dinner"
+    date-time="2019-12-11"
+    date="11/12/2019"
+  }}
+
+  {{> ./card-item/card-item
+    card-size="large"
+    card-bg="white"
+    card-image="true"
+    image-small="true"
+    image-link="../src/images/cards/cards-image-4.jpg"
+    title-text="Coffee with Susan"
+    date-time="2019-05-10"
+    date="10/05/2019"
+    card-link="true"
+    link="http://therainforestcafe.co.uk/"
+  }}
+
+  {{> ./card-item/card-item
+    card-size="small"
+    card-bg="white"
+    period-text="4pm - 5pm"
+    title-text="Massage"
+    date-time="2019-08-11"
+    date="11/08/2019"
+  }}
+</section>

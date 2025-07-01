@@ -1,0 +1,29 @@
+.search {
+  width: 100%;
+  padding: rem-calc(7) 0;
+  padding-left: rem-calc(30);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-transform: capitalize;
+  background: url("../../../images/search.svg") 0% center / 24px 24px no-repeat transparent;
+  border: none;
+  border-bottom: 1px solid $gray-200;
+  color: $gray-500;
+  transition: padding-left 250ms ease;
+
+  &::-webkit-search-decoration {
+    display: none;
+  }
+
+  &::placeholder {
+    color: $gray-200;
+  }
+
+  &:active,
+  &:focus {
+    padding-left: rem-calc(6);
+    outline: 0;
+    background-image: none;
+  }
+}

@@ -1,0 +1,19 @@
+<section class="form">
+  <h2 class="visually-hidden">Form</h2>
+
+  <form class="form__wrapper container" action="#" method="get" name="form" autocomplete="off">
+    <fieldset class="form__checkbox">
+      {{> ../checkbox/checkbox label-text="Today"}}
+      {{> ../checkbox/checkbox label-text="Tomorrow"}}
+      {{> ../checkbox/checkbox label-text="Week"}}
+      {{> ../checkbox/checkbox label-text="Month"}}
+    </fieldset>
+
+    <fieldset class="form__group">
+      {{> ../select/select search-parent-selector="form__select" }}
+      {{> ../switcher/switcher search-parent-selector="form__switcher" }}
+    </fieldset>
+
+    {{> ../search/search search-parent-selector="form__search" }}
+  </form>
+</section>

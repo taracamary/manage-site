@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Manage site</title>
+    <link href="/webpack/views/styles/styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="view-list-wrapper">
+    <h1 class="title">
+        Navigate to page:
+    </h1>
+    <ol class="views-list">
+        {{#pages this}}
+            <li class="view">
+                <a href="/{{this}}">{{this}}</a>
+            </li>
+        {{/pages}}
+    </ol>
+</div>
+</body>
+</html>

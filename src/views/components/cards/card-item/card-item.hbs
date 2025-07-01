@@ -1,0 +1,45 @@
+<article class="card__item card__item--{{card-size}} card__item--{{card-bg}}">
+  {{#if period-text}}<h2 class="card__period">{{period-text}}</h2>{{/if}}
+  {{#if card-image}}<img class="card__image {{#if image-small}}card__image--small{{/if}}{{#if image-large}}card__image--large{{/if}}" src="{{image-link}}" alt="Card image">{{/if}}
+  <div class="card__description">
+    <h3 class="card__title">{{title-text}}</h3>
+    <div class="card__subtitle">
+      <time class="card__date" datetime="{{date-time}}">{{date}}</time>
+      {{#if card-time}}<span class="card__time">{{time}}</span>{{/if}}
+    </div>
+    {{#if card-link}}<a class="card__link" href="{{link}}">{{link}}</a>{{/if}}
+  </div>
+</article>
+
+{{!--
+  card-small -> the card size is small
+  card-large -> the card size is large
+
+  bg-white -> white background
+  bg-pink -> pink background
+
+  card-period -> the text of the period is exists
+
+  period-text -> period text
+
+  card-image -> the image is exists
+
+  image-small -> the image size is small
+  image-large -> the image size is large
+
+  image-link -> link to the image
+
+  title-text -> card title text
+
+  date-time -> date format for the datetime attribute
+
+  date -> date text
+
+  card-time -> the time is exists
+
+  time -> time text
+
+  card-link -> the link is exists
+
+  link - link address
+--}}

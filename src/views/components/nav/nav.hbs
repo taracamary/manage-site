@@ -1,0 +1,28 @@
+<nav class="nav nav--{{location}}">
+  <ul class="nav__list">
+    <li class="nav__item">
+      <a class="nav__link" href="#">
+        <span class="nav__icon fa-solid fa-calendar" aria-hidden="true"></span>
+        Calendar
+      </a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link nav__link--{{modificator}}" href="#">
+        <span class="nav__icon fa-solid fa-paper-plane" aria-hidden="true"></span>
+        Plans
+        </a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" href="#">
+        <span class="nav__icon fa-solid fa-circle-check" aria-hidden="true"></span>
+        To do
+        </a>
+    </li>
+  </ul>
+</nav>
+
+{{!--
+  modificator - active -> current page
+  location - header -> location in the header
+             footer -> location in the footer
+--}}

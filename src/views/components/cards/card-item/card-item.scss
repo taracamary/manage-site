@@ -1,0 +1,98 @@
+.card {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin-top: rem-calc(30);
+    margin-bottom: rem-calc(30);
+    box-shadow: 0px 0px 20px $gray-300;
+    break-inside: avoid;
+
+    &--small {
+      height: rem-calc(175);
+    }
+
+    &--large {
+      height: rem-calc(350);
+    }
+
+    &--white {
+      background-color: $white;
+    }
+
+    &--pink {
+      background-color: $pink;
+    }
+  }
+
+  &__period {
+    margin: 0;
+    padding: rem-calc(20) rem-calc(20) 0 rem-calc(20);
+    font-size: $font-size-20;
+    font-weight: $font-weight-bold;
+    line-height: unitless-lh(20, 24);
+    color: $gray-500;
+    text-transform: uppercase;
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    &--small {
+      height: rem-calc(174);
+    }
+
+    &--large {
+      height: rem-calc(255);
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: rem-calc(20);
+  }
+
+  &__title {
+    margin: 0 0 rem-calc(12) 0;
+    font-size: $font-size-20;
+    font-weight: $font-weight-regular;
+    line-height: unitless-lh(20, 24);
+    color: $gray-500;
+  }
+
+  &__subtitle {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__date {
+    flex: 1 0 auto;
+    font-size: $font-size-16;
+    line-height: unitless-lh(16, 19);
+    color: $blue;
+  }
+
+  &__time {
+    font-size: $font-size-16;
+    line-height: unitless-lh(16, 19);
+    color: $blue;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    margin-top: auto;
+    font-size: $font-size-16;
+    line-height: unitless-lh(16, 24);
+    color: $gray-500;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $blue;
+    }
+  }
+}

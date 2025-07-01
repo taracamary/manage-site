@@ -1,0 +1,15 @@
+@use "sass:math";
+
+@function rem-calc($value) {
+  $rem-value: math.div($value, 16) * 1rem;
+  $rounded-value: math.div(math.round($rem-value * 100), 100);
+
+  @return $rounded-value;
+}
+
+@function unitless-lh($lh, $fs) {
+  $base-value: math.div($lh, $fs);
+  $main-value: math.div(math.round($base-value * 100), 100);
+
+  @return $main-value;
+}

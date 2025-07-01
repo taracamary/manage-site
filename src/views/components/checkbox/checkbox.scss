@@ -1,0 +1,51 @@
+.checkbox {
+  position: relative;
+  padding-left: rem-calc(36);
+  line-height: unitless-lh(16, 18);
+  color: $gray-500;
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    .checkbox__mark {
+      background-color: $pink-100;
+    }
+  }
+
+  &__input:checked + .checkbox__mark {
+    background-color: $pink;
+
+    &::after {
+      display: block;
+    }
+  }
+
+  &__mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: rem-calc(20);
+    height: rem-calc(20);
+    background-color: $gray-200;
+    border-radius: 2px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $pink-100;
+    }
+
+    &::after {
+      content: '';
+      display: none;
+      width: rem-calc(11);
+      height: rem-calc(8);
+      margin-top: rem-calc(4);
+      margin-left: rem-calc(5);
+      border: 1px solid $blue;
+      border-width: 0 0 1px 1px;
+      transform: rotate(-45deg);
+    }
+  }
+}

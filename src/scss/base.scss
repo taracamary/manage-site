@@ -1,0 +1,50 @@
+@import "mixins";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: $maven-pro-font;
+  font-weight: $font-weight-regular;
+  background-color: $gray-100;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}

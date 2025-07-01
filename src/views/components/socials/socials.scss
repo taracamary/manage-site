@@ -1,0 +1,65 @@
+.socials {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+
+  @include media-breakpoint-down(sm) {
+    position: absolute;
+    right: 0;
+    bottom: rem-calc(44);
+    flex-direction: column;
+    background-color: $blue-200;
+  }
+
+  &--open {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    @include media-breakpoint-up(md) {
+      margin-left: rem-calc(46);
+    }
+
+    &--dropdown {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: rem-calc(46);
+      height: 100%;
+      margin-left: 0;
+      background-color: rgba($pink, 0.2);
+
+      @include media-breakpoint-up(md) {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem-calc(45);
+    height: rem-calc(45);
+    color: $gray;
+    transition: color 250ms ease;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $pink-100;
+    }
+  }
+
+  .socials__icon {
+    @include media-breakpoint-down(sm) {
+      font-size: rem-calc(16);
+    }
+  }
+}

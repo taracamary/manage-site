@@ -1,0 +1,30 @@
+.cards {
+  columns: 4 263px;
+  column-gap: 30px;
+  padding: rem-calc(50) rem-calc(16) rem-calc(120);
+
+  @include media-breakpoint-down(sm) {
+    padding: rem-calc(50) rem-calc(16);
+  }
+
+  &__add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: rem-calc(175);
+    border: 2px solid $gray;
+    color: $gray;
+    cursor: pointer;
+
+    @include media-breakpoint-down(xs) {
+      height: rem-calc(60);
+    }
+
+    &:hover,
+    &:focus {
+      border: 2px solid $pink-100;
+      color: $pink-100;
+    }
+  }
+}

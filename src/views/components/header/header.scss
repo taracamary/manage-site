@@ -1,0 +1,11 @@
+.header {
+  position: relative;
+  min-height: rem-calc(50);
+  background-color: $blue;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

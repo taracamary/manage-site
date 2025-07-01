@@ -1,0 +1,28 @@
+.logo {
+  position: relative;
+  margin: 0;
+  margin-bottom: rem-calc(6);
+  font-family: $montserrat-font;
+  font-size: $font-size-35;
+  line-height: unitless-lh(35, 42);
+  color: $white;
+  text-transform: lowercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: rem-calc(12);
+    height: rem-calc(12);
+    margin-top: rem-calc(-6);
+    margin-left: rem-calc(3);
+    background-color: $white;
+    border-radius: 50%;
+  }
+
+  &--footer {
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+}
