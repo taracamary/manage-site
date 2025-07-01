@@ -10,13 +10,11 @@ Manage is a lightweight, responsive single-page task planner. It lets you:
 
 Built as a showcase of modern frontend tooling and best practices, Manage demonstrates modular SCSS, Handlebars templating, and a Webpack-powered build pipeline.
 
----
 
 ## 🔗 Live Demo
 
 [View the live demo on GitHub Pages](https://taracamary.github.io/manage-site/)
 
----
 
 ## 🛠️ Technologies Used
 
@@ -31,13 +29,11 @@ Built as a showcase of modern frontend tooling and best practices, Manage demons
 - **Font Awesome** for icons  
 - **HTML5** semantic markup & accessibility best practices
 
----
 
 ## 📸 Screenshot
 
 ![Manage Screenshot](assets/screenshot.jpg)
 
----
 
 ## 🚀 Quick Start
 

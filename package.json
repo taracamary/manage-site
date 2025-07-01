@@ -10,7 +10,7 @@
   "scripts": {
     "build-website": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack --config ./webpack/configs --env.prod --progress --colors",
     "start-dev-server": "webpack-dev-server --config ./webpack/configs --progress --colors --open --watch --host 0.0.0.0",
-    "deploy": "yarn run build-website && gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "babel": {
     "presets": [
@@ -30,7 +30,7 @@
     "fastparse": "1.1.2",
     "file-loader": "5.0.2",
     "file-system": "2.2.2",
-    "gh-pages": "^6.3.0",
+    "gh-pages": "4",
     "glob": "7.1.6",
     "global": "4.4.0",
     "handlebars": "4.5.3",
