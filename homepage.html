@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="description">
+  <meta name="keywords"
+    content="task management, to-do list, daily planner, calendar, event scheduling, goals, planning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Homepage | Site</title>
+
+  <link href="content/css/styles.css" rel="stylesheet">
+
+  <script defer src="https://kit.fontawesome.com/e5b047fdd5.js" crossorigin="anonymous"></script>
+  <script defer src="content/js/runtime.js"></script>
+  <script defer src="content/js/vendors.js"></script>
+  <script defer src="content/js/app.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__wrapper container">
+      <span class="logo logo--header">
+        Manage
+      </span>
+
+
+      <nav class="nav nav--header">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#">
+              <span class="nav__icon fa-solid fa-calendar" aria-hidden="true"></span>
+              Calendar
+            </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--active" href="#">
+              <span class="nav__icon fa-solid fa-paper-plane" aria-hidden="true"></span>
+              Plans
+            </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">
+              <span class="nav__icon fa-solid fa-circle-check" aria-hidden="true"></span>
+              To do
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+
+    </div>
+  </header>
+  <main class="main-content">
+    <h1 class="visually-hidden">Homepage</h1>
+
+    <section class="form">
+      <h2 class="visually-hidden">Form</h2>
+
+      <form class="form__wrapper container" action="#" method="get" name="form" autocomplete="off">
+        <fieldset class="form__checkbox">
+          <label class="checkbox">
+            <input class="checkbox__input visually-hidden" type="checkbox" name="checkbox">
+            Today
+            <span class="checkbox__mark"></span>
+          </label>
+          <label class="checkbox">
+            <input class="checkbox__input visually-hidden" type="checkbox" name="checkbox">
+            Tomorrow
+            <span class="checkbox__mark"></span>
+          </label>
+          <label class="checkbox">
+            <input class="checkbox__input visually-hidden" type="checkbox" name="checkbox">
+            Week
+            <span class="checkbox__mark"></span>
+          </label>
+          <label class="checkbox">
+            <input class="checkbox__input visually-hidden" type="checkbox" name="checkbox">
+            Month
+            <span class="checkbox__mark"></span>
+          </label>
+        </fieldset>
+
+        <fieldset class="form__group">
+          <label class="form__select">
+            <select class="select" name="plan-category">
+              <option value="0" selected>All plans</option>
+              <option value="1">Family</option>
+              <option value="2">Work</option>
+              <option value="3">Study</option>
+              <option value="4">Wish</option>
+            </select>
+          </label>
+
+
+          <div class="switcher form__switcher">
+            <input class="switcher__input visually-hidden" id="major" type="radio" name="switcher">
+            <label class="switcher__label switcher__label-major" for="major">Major</label>
+
+            <input class="switcher__input visually-hidden" id="minor" type="radio" name="switcher">
+            <label class="switcher__label switcher__label-minor" for="minor">Minor</label>
+          </div>
+
+
+        </fieldset>
+
+        <label class="form__search">
+          <input class="search" type="search" name="search" placeholder="Search for plans">
+        </label>
+
+
+      </form>
+    </section>
+
+    <section class="cards container">
+      <h2 class="visually-hidden">Cards</h2>
+
+      <button type="button" class="cards__add-button reset-button">
+        <span class="fa-solid fa-plus fa-3x"></span>
+      </button>
+
+      <article class="card__item card__item--large card__item--white">
+
+        <img class="card__image card__image--large" src="../src/images/cards/cards-image-1.jpg" alt="Card image">
+        <div class="card__description">
+          <h3 class="card__title">Vacation</h3>
+          <div class="card__subtitle">
+            <time class="card__date" datetime="2019-05-10">10-05-2019</time>
+
+          </div>
+
+        </div>
+      </article>
+
+
+
+      <article class="card__item card__item--large card__item--white">
+
+        <img class="card__image card__image--large" src="../src/images/cards/cards-image-2.jpg" alt="Card image">
+        <div class="card__description">
+          <h3 class="card__title">Cinema</h3>
+          <div class="card__subtitle">
+            <time class="card__date" datetime="2019-05-11">11/05/2019</time>
+            <span class="card__time">7pm</span>
+          </div>
+
+        </div>
+      </article>
+
+
+
+      <article class="card__item card__item--small card__item--white">
+        <h2 class="card__period">7am - 8am</h2>
+
+        <div class="card__description">
+          <h3 class="card__title">Doctor</h3>
+          <div class="card__subtitle">
+            <time class="card__date" datetime="2019-05-11">11/05/2019</time>
+
+          </div>
+
+        </div>
+      </article>
+
+
+
+      <article class="card__item card__item--small card__item--pink">
+        <h2 class="card__period">9am - 10am</h2>
+
+        <div class="card__description">
+          <h3 class="card__title">Meeting</h3>
+          <div class="card__subtitle">
+            <time class="card__date" datetime="2019-05-11">11/05/2019</time>
+
+          </div>
+
+        </div>
+      </article>
+
+
+
+      <article class="card__item card__item--large card__item--white">
+
+        <img class="card__image card__image--large" src="../src/images/cards/cards-image-3.jpg" alt="Card image">
+        <div class="card__description">
+          <h3 class="card__title">Family dinner</h3>
+          <div class="card__subtitle">
+            <time class="card__date" datetime="2019-12-11">11/12/2019</time>
+
+          </div>
+
+        </div>
+      </article>
+
+
+
+      <article class="card__item card__item--large card__item--white">
+
+        <img class="card__image card__image--small" src="../src/images/cards/cards-image-4.jpg" alt="Card image">
+        <div class="card__description">
+          <h3 class="card__title">Coffee with Susan</h3>
+          <div class="card__subtitle">
+            <time class="card__date" datetime="2019-05-10">10/05/2019</time>
+
+          </div>
+          <a class="card__link" href="http://therainforestcafe.co.uk/">http://therainforestcafe.co.uk/</a>
+        </div>
+      </article>
+
+
+
+      <article class="card__item card__item--small card__item--white">
+        <h2 class="card__period">4pm - 5pm</h2>
+
+        <div class="card__description">
+          <h3 class="card__title">Massage</h3>
+          <div class="card__subtitle">
+            <time class="card__date" datetime="2019-08-11">11/08/2019</time>
+
+          </div>
+
+        </div>
+      </article>
+
+
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__wrapper container">
+      <span class="logo logo--footer">
+        Manage
+      </span>
+
+
+      <nav class="nav nav--footer">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#">
+              <span class="nav__icon fa-solid fa-calendar" aria-hidden="true"></span>
+              Calendar
+            </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--active" href="#">
+              <span class="nav__icon fa-solid fa-paper-plane" aria-hidden="true"></span>
+              Plans
+            </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">
+              <span class="nav__icon fa-solid fa-circle-check" aria-hidden="true"></span>
+              To do
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+
+      <ul class="socials js-socials">
+        <li class="socials__item">
+          <a class="socials__link" href="#" aria-label="Go to the instagram page" target="_blank"
+            rel="noopener noreferrer">
+            <span class="socials__icon fa-brands fa-instagram-square fa-xl" aria-hidden="true"></span>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link" href="#" aria-label="Go to the facebook page" target="_blank"
+            rel="noopener noreferrer">
+            <span class="socials__icon fa-brands fa-facebook-square fa-xl" aria-hidden="true"></span>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link" href="#" aria-label="Go to the twitter page" target="_blank"
+            rel="noopener noreferrer">
+            <span class="socials__icon fa-brands fa-twitter-square fa-xl" aria-hidden="true"></span>
+          </a>
+        </li>
+      </ul>
+
+      <button class="socials__item socials__item--dropdown js-socials__item--dropdown reset-button"
+        aria-label="Open the list of social networks">
+        <span class="socials__link">
+          <span class="socials__icon fa-solid fa-share-nodes fa-xl" aria-hidden="true"></span>
+        </span>
+      </button>
+
+      <script>
+        const dropdown = document.querySelector(".js-socials");
+        const buttonOpenDropdown = document.querySelector(".js-socials__item--dropdown");
+        const toggleDropdown = () => {
+          dropdown.classList.toggle("socials--open");
+        };
+
+        const closeDropdown = () => {
+          dropdown.classList.remove("socials--open");
+        };
+
+        buttonOpenDropdown.addEventListener("click", function (e) {
+          e.stopPropagation();
+          toggleDropdown();
+        });
+
+        document.addEventListener("click", function (e) {
+          closeDropdown();
+        });
+      </script>
+    </div>
+  </footer>
+</body>
+
+</html>
