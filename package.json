@@ -8,8 +8,9 @@
   "keywords": [],
   "repository": {},
   "scripts": {
-    "build-website": "webpack --config ./webpack/configs --env.prod --progress --colors",
-    "start-dev-server": "webpack-dev-server --config ./webpack/configs --progress --colors --open --watch --host 0.0.0.0"
+    "build-website": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack --config ./webpack/configs --env.prod --progress --colors",
+    "start-dev-server": "webpack-dev-server --config ./webpack/configs --progress --colors --open --watch --host 0.0.0.0",
+    "deploy": "yarn run build-website && gh-pages -d dist"
   },
   "babel": {
     "presets": [
@@ -23,11 +24,13 @@
     "cache-loader": "4.1.0",
     "clean-webpack-plugin": "3.0.0",
     "copy-webpack-plugin": "5.0.5",
+    "cross-env": "^7.0.3",
     "css-loader": "3.2.0",
     "extract-text-webpack-plugin": "4.0.0-beta.0",
     "fastparse": "1.1.2",
     "file-loader": "5.0.2",
     "file-system": "2.2.2",
+    "gh-pages": "^6.3.0",
     "glob": "7.1.6",
     "global": "4.4.0",
     "handlebars": "4.5.3",
