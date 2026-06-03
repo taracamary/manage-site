@@ -42,6 +42,10 @@ Ensure you have Node.js and Yarn installed globally
 
 ```bash
 git clone [https://github.com/taracamary.github.io/manage-site.git](https://github.com/taracamary.github.io/manage-site.git)
+
+```
+
+```bash
 cd manage-site
 
 ```
@@ -64,5 +68,3 @@ yarn run build-website
 ```
 
 *Compiles compressed, production-grade assets directly into the `/dist` deployment root*
-
-```
