@@ -60,4 +60,4 @@ yarn run start-dev-server
 
 ```
 
-*The application will mount locally. Navigate to: `http://localhost:8080/homepage.html*`
+*The application will mount locally. Navigate to: `http://localhost:8080/homepage.html`*
