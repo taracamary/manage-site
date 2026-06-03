@@ -40,37 +40,29 @@ By leveraging Handlebars (`.hbs`), the project demonstrates how to enforce a mod
 
 Ensure you have Node.js and Yarn installed globally
 
-1. **Clone & Navigate:**
-   ```bash
-   git clone [https://github.com/taracamary.github.io/manage-site.git](https://github.com/taracamary.github.io/manage-site.git)
-   cd manage-site
+```bash
+git clone [https://github.com/taracamary.github.io/manage-site.git](https://github.com/taracamary.github.io/manage-site.git)
+cd manage-site
 
 ```
 
-2. **Install Dependencies:**
 ```bash
 yarn install
 
 ```
 
-
-3. **Boot Development Environment (with HMR):**
 ```bash
 yarn run start-dev-server
 
 ```
 
-
 *The application will mount locally. Navigate to: `http://localhost:8080/homepage.html*`
-4. **Compile Production Distribution Assets:**
+
 ```bash
 yarn run build-website
 
 ```
 
-
 *Compiles compressed, production-grade assets directly into the `/dist` deployment root*
 
 ```
-
----
