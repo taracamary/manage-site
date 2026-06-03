@@ -41,7 +41,7 @@ By leveraging Handlebars (`.hbs`), the project demonstrates how to enforce a mod
 Ensure you have Node.js and Yarn installed globally
 
 ```bash
-git clone [https://github.com/taracamary.github.io/manage-site.git](https://github.com/taracamary.github.io/manage-site.git)
+git clone https://github.com/taracamary.github.io/manage-site.git
 
 ```
 
