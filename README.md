@@ -61,10 +61,3 @@ yarn run start-dev-server
 ```
 
 *The application will mount locally. Navigate to: `http://localhost:8080/homepage.html*`
-
-```bash
-yarn run build-website
-
-```
-
-*Compiles compressed, production-grade assets directly into the `/dist` deployment root*
