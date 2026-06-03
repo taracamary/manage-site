@@ -1,47 +1,76 @@
-# Manage
+# Manage — Component-Driven Task Planner Layout Engine
 
-## 🚀 Project Description
+A high-fidelity, responsive single-page dashboard designed for task orchestration and productivity tracking. This repository serves as an engineering showcase for a custom-built **Webpack asset pipeline** and a **component-based HTML architecture** using the Handlebars template engine—achieving modular development benefits with absolute zero runtime framework overhead
 
-Manage is a lightweight, responsive single-page task planner. It lets you:
-- Filter tasks by date (Today, Tomorrow, Week, Month)  
-- Choose task categories (Family, Work, Study, Wish)  
-- Set urgency levels (Major, Minor)  
-- View and interact with dynamic cards  
-
-Built as a showcase of modern frontend tooling and best practices, Manage demonstrates modular SCSS, Handlebars templating, and a Webpack-powered build pipeline.
+* **Live Showcase:** https://maria-kapiturko-manage.vercel.app
+* **Target Domain:** Fintech, Productivity SaaS, Dashboard Interfaces
 
 ---
 
-## 🔗 Live Demo
+## 🏗️ Architectural Highlights & Engineering Choices
 
-[View the live demo on GitHub Pages](https://taracamary.github.io/manage-site/)
+### 1. Custom Webpack 4 Compilation Pipeline
+Instead of relying on boilerplate configurations, the build system was engineered from scratch to isolate build concerns into standalone modular scripts (`/webpack/bundlers`):
+* Separate compilation streams optimize hot-reloading (HMR) speeds for assets, views, and stylesheets independently.
+* Integrates a custom Handlebars configuration (`hbs-loader`) to compile isolated template partials into a unified production-ready HTML structure
 
----
+### 2. Atomic Design Tokens & BEM CSS Architecture
+Styles are decoupled using a scalable, tokenized directory structure (`src/scss/`):
+* **`variables.scss` & `functions.scss`:** Centralized design tokens governing typography scaling, dynamic spacing ratios via custom `rem()` conversion functions, and semantic color mapping
+* **Component-Level Isolation:** Every interface node (Cards, Filters, Sidebar elements) maps to independent style blocks, following strict **BEM structural naming** to guarantee low CSS specificity and fast browser paint cycles
+* **Fluid Grids:** Layout layout shifts are mitigated by utilizing native CSS Grid (`repeat(auto-fill, minmax(...))`) and Flexbox alignments, ensuring perfect responsiveness on both high-resolution desktop configurations and mobile screens
 
-## 🛠️ Technologies Used
-
-- **Webpack** (4.x) for bundling JS, CSS and assets  
-- **Babel** for ES6+ transpilation  
-- **SCSS** for structured, maintainable styles  
-- **PostCSS** (Autoprefixer) for cross-browser support  
-- **Custom Design Tokens** (Color palette, Font sizing and weight scales , Font family definitions via `@font-face` )  
-- **CSS Layout**: Flexbox, Grid, multi-column layouts  
-- **Handlebars** for HTML templating  
-- **Yarn** as package manager  
-- **Font Awesome** for icons  
-- **HTML5** semantic markup & accessibility best practices
+### 3. Frameworkless Component Philosophy
+By leveraging Handlebars (`.hbs`), the project demonstrates how to enforce a modern component approach (reusable partials, layout blocks, slot-like behavior) on static or multi-page applications without loading megabytes of heavy runtime JavaScript frameworks like React or Angular
 
 ---
 
-## 📸 Screenshot
+## 🛠️ Detailed Tech Stack
 
-![Manage Screenshot](assets/screenshot.jpg)
+* **Templating Engine:** Handlebars (HBS) for strict separation of markup and structural interface blocks
+* **Module Bundler:** Webpack 4 (Custom environment, target, and loader setups)
+* **Compiler:** Babel for processing modern ES6+ features into robust cross-browser compatible code
+* **Styles:** SCSS Preprocessor integrated with PostCSS (Autoprefixer) for defensive cross-browser styling
+* **Layout Systems:** Advanced CSS Flexbox & CSS Grid Matrix layouts
+* **Package Management:** Yarn for deterministic dependency resolution
 
 ---
 
-## 🚀 Quick Start
+## 💻 Local Development Setup
 
-- To install `node_modules` run `yarn install`.
-- To run project in dev mode run `yarn run start-dev-server`.
-- To create production build run `yarn run build-website`.
-- Link to the website `http://localhost:8080/homepage.html`.
+Ensure you have Node.js and Yarn installed globally
+
+1. **Clone & Navigate:**
+   ```bash
+   git clone [https://github.com/taracamary.github.io/manage-site.git](https://github.com/taracamary.github.io/manage-site.git)
+   cd manage-site
+
+```
+
+2. **Install Dependencies:**
+```bash
+yarn install
+
+```
+
+
+3. **Boot Development Environment (with HMR):**
+```bash
+yarn run start-dev-server
+
+```
+
+
+*The application will mount locally. Navigate to: `http://localhost:8080/homepage.html*`
+4. **Compile Production Distribution Assets:**
+```bash
+yarn run build-website
+
+```
+
+
+*Compiles compressed, production-grade assets directly into the `/dist` deployment root*
+
+```
+
+---
