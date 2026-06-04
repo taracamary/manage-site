@@ -27,11 +27,7 @@
   overflow: visible;
   outline: none;
 
-  :focus:not(:focus-visible) {
-    outline: none;
-  }
-
-  :focus:not(:-moz-focusring) {
+  &:focus:not(:focus-visible) {
     outline: none;
   }
 }

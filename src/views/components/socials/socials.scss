@@ -1,10 +1,11 @@
 .socials {
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   list-style: none;
 
   @include media-breakpoint-down(sm) {
+    display: none;
     position: absolute;
     right: 0;
     bottom: rem-calc(44);
@@ -57,7 +58,7 @@
     }
   }
 
-  .socials__icon {
+  &__icon {
     @include media-breakpoint-down(sm) {
       font-size: rem-calc(16);
     }

@@ -21,24 +21,3 @@
     <span class="socials__icon fa-solid fa-share-nodes fa-xl" aria-hidden="true"></span>
   </span>
 </button>
-
-<script>
-  const dropdown = document.querySelector(".js-socials");
-  const buttonOpenDropdown = document.querySelector(".js-socials__item--dropdown");
-  const toggleDropdown = () => {
-    dropdown.classList.toggle("socials--open");
-  };
-
-  const closeDropdown = () => {
-    dropdown.classList.remove("socials--open");
-  };
-
-  buttonOpenDropdown.addEventListener("click", function (e) {
-    e.stopPropagation();
-    toggleDropdown();
-  });
-
-  document.addEventListener("click", function (e) {
-    closeDropdown();
-  });
-</script>

@@ -6,8 +6,7 @@
   cursor: pointer;
 
   &:hover,
-  &:focus,
-  &:active {
+  &:focus-within {
     .checkbox__mark {
       background-color: $pink-100;
     }
@@ -29,12 +28,6 @@
     height: rem-calc(20);
     background-color: $gray-200;
     border-radius: 2px;
-
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: $pink-100;
-    }
 
     &::after {
       content: '';
