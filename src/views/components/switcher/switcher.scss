@@ -14,12 +14,12 @@
     flex: 1 0 rem-calc(78);
     height: rem-calc(32);
     padding: rem-calc(8);
+    color: $gray-500;
     cursor: pointer;
   }
 
   &__label-major {
     background-color: $pink;
-    color: $gray-500;
 
     &:hover,
     &:focus {
@@ -29,7 +29,6 @@
 
   &__label-minor {
     background-color: $white;
-    color: $gray-500;
 
     &:hover,
     &:focus {

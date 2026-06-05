@@ -7,7 +7,6 @@
   background-color: $blue;
 
   @include media-breakpoint-down(sm) {
-    padding: 0;
     height: rem-calc(44);
   }
 
@@ -15,9 +14,5 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    @include media-breakpoint-down(sm) {
-      padding: 0;
-    }
   }
 }

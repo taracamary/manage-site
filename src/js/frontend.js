@@ -1,9 +1,3 @@
-function Frontend() {
-  this.init = function () {
-    initSocialsDropdown();
-  };
-}
-
 function initSocialsDropdown() {
   const dropdown = document.querySelector(".js-socials");
   const toggleButton = document.querySelector(".js-socials__item--dropdown");
@@ -20,4 +14,8 @@ function initSocialsDropdown() {
   });
 }
 
-module.exports = new Frontend();
+module.exports = {
+  init() {
+    initSocialsDropdown();
+  },
+};
