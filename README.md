@@ -38,48 +38,37 @@ The project follows a component-oriented approach with BEM methodology and modul
 
 ---
 
-## Architecture
+## What I focused on
 
-### SCSS structure
-
-```
-src/scss/
-├── functions.scss     # rem-calc(), unitless-lh()
-├── variables.scss     # design tokens: colors, type scale, breakpoints, transitions
-├── mixins.scss        # media-breakpoint-up / down / only
-├── base.scss          # box-sizing reset, element defaults
-├── shared.scss        # .container, .visually-hidden, .reset-button
-├── fonts.scss         # @font-face declarations
-├── pages.scss         # page-level style imports
-└── components.scss    # imports all component SCSS files
-```
-
-Component styles live alongside their templates:
-
-```
-src/views/components/<name>/
-├── <name>.hbs
-└── <name>.scss
-```
-
-BEM naming convention is used throughout to keep specificity low and structure predictable.
-
-### JavaScript structure
-
-- Single entry point: `src/index.js` (SCSS + JS init)
-- UI logic in `src/js/frontend.js`, initialized via `frontend.init()`
-- Stable class-based selectors with `js-` prefix for JS hooks
-- Null-guard on DOM queries — no crashes on partial page loads
+- Assembling a Webpack 4 pipeline from scratch with isolated bundlers for scripts, styles, views, images, and fonts
+- Handlebars layout inheritance (`{{#extend}}` / `{{#content}}`) to avoid markup duplication across pages and layouts
+- SCSS token system backed by `rem-calc()` — pixel values defined once, output consistently in `rem` across all components
+- CSS-only form controls: checkbox, switcher, and select styled without any JS — state handled entirely via CSS selectors
+- Strict BEM across all 12 components — no utility class mixing, no `!important`, no specificity overrides
+- `js-` prefixed selectors as stable DOM hooks, decoupled from styling class names
 
 ---
 
 ## UI / UX Highlights
 
-- CSS multi-column masonry layout for cards with `break-inside: avoid` — no JS reflow
-- Custom form controls built on native inputs: keyboard-accessible, works without JS
-- Responsive footer: full nav + socials on desktop, icon-only nav + dropdown socials on mobile
-- Consistent spacing via `rem-calc()` — single source of truth for all sizes
-- Hover and focus states on all interactive elements
+- Card grid uses CSS `columns` with `break-inside: avoid` — masonry layout without JS or a library
+- Footer adapts by breakpoint: full logo + nav + socials on desktop; icon-only nav + socials behind a toggle on mobile
+- Search input transitions on `:focus` — icon disappears, left padding shrinks, giving more typing room
+- Switcher (Major / Minor) is a native radio group; active segment is highlighted via CSS `input:checked + label`, no JS state
+- Checkbox checked state is driven entirely by CSS `:checked` selector on a visually hidden `<input>`
+- Select retains native OS behavior and dropdown while replacing the default arrow with a custom SVG via `background-image`
+
+---
+
+## Architecture
+
+- Handlebars templates with layout inheritance: `_master-layout` → `_site-layout` → page template
+- Each component owns its markup and styles in one folder: `<name>.hbs` + `<name>.scss`
+- SCSS layered into tokens (`variables`, `functions`, `mixins`), globals (`base`, `shared`, `fonts`), and per-component files
+- BEM naming throughout — low specificity, no cascade conflicts
+- CSS multi-column for the card masonry grid; Flexbox for header, footer, and form sections
+- Custom Webpack 4 pipeline with separate bundlers for scripts, styles, views, images, and fonts
+- Single JS entry point; UI modules initialized explicitly via `frontend.init()`
 
 ---
 
@@ -103,16 +92,6 @@ cd manage-site
 npm install
 npm start        # dev server → http://localhost:8080/homepage.html
 ```
-
----
-
-## What I focused on
-
-- Building a modular SCSS architecture with design tokens and utility mixins
-- Structuring reusable UI components without any JS framework
-- Keeping form controls accessible while fully custom-styled
-- Writing a custom Webpack build pipeline from scratch instead of using a starter
-- Applying BEM consistently across all components
 
 ---
 
