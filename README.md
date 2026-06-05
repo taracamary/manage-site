@@ -2,7 +2,7 @@
 
 Responsive task planner dashboard — a frontend portfolio project
 
-**Live demo:** [https://maria-kapiturko-manage.vercel.app/](https://maria-kapiturko-manage.vercel.app/)
+**Live demo:** [https://maria-kapiturko-manage.vercel.app](https://maria-kapiturko-manage.vercel.app)
 
 ---
 
