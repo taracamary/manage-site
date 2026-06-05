@@ -2,10 +2,6 @@
   display: flex;
   border: 4px solid $gray-200;
 
-  &:focus {
-    box-shadow: $box-shadow-main;
-  }
-
   &__input:checked + label {
     background-color: $blue;
     color: $white;

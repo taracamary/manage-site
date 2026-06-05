@@ -5,17 +5,17 @@ function Frontend() {
 }
 
 function initSocialsDropdown() {
-  var dropdown = document.querySelector(".js-socials");
-  var toggleButton = document.querySelector(".js-socials__item--dropdown");
+  const dropdown = document.querySelector(".js-socials");
+  const toggleButton = document.querySelector(".js-socials__item--dropdown");
 
   if (!dropdown || !toggleButton) return;
 
-  toggleButton.addEventListener("click", function (e) {
+  toggleButton.addEventListener("click", (e) => {
     e.stopPropagation();
     dropdown.classList.toggle("socials--open");
   });
 
-  document.addEventListener("click", function () {
+  document.addEventListener("click", () => {
     dropdown.classList.remove("socials--open");
   });
 }

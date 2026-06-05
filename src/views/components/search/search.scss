@@ -1,7 +1,6 @@
 .search {
   width: 100%;
-  padding: rem-calc(7) 0;
-  padding-left: rem-calc(30);
+  padding: rem-calc(7) 0 rem-calc(7) rem-calc(30);
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
@@ -23,7 +22,7 @@
   &:active,
   &:focus {
     padding-left: rem-calc(6);
-    outline: 0;
+    outline: none;
     background-image: none;
   }
 }
