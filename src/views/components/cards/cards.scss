@@ -1,3 +1,5 @@
+@use "../../../scss/layers/tokens" as *;
+
 .cards {
   columns: 4 263px;
   column-gap: 30px;

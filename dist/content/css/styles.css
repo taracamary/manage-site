@@ -1,21 +1,3 @@
-/* Color pallet */
-/* Font size */
-/* Font weight */
-/* Font family */
-/* Design styling */
-/* Media breakpoint */
-/*
-  key points: 576 - xs, 768 -sm , 992 - md, 1200 - lg
-*/
-/*
-  Web font binaries are not bundled with this project. The previous url()
-  sources pointed at ../fonts/** files that do not exist in the repo, which
-  produced broken asset requests and could fail the SCSS build.
-
-  The url() sources were removed so the build resolves cleanly. These rules
-  now match only locally installed fonts; when a font is not present the
-  font-family fallback stack ("Arial", sans-serif) is used instead.
-*/
 @font-face {
   font-family: "Maven Pro";
   font-style: normal;
@@ -37,6 +19,12 @@
   src: local("Montserrat");
   font-display: swap;
 }
+/* Color pallet */
+/* Font size */
+/* Font weight */
+/* Font family */
+/* Design styling */
+/* Media breakpoint */
 *,
 *::before,
 *::after {
@@ -125,6 +113,9 @@ fieldset {
 
 /* Page layout */
 /* Component layout */
+/*
+  key points: 576 - xs, 768 -sm , 992 - md, 1200 - lg
+*/
 .cards {
   -webkit-columns: 4 263px;
      -moz-columns: 4 263px;

@@ -1,3 +1,5 @@
+@use "../../../../scss/layers/tokens" as *;
+
 .card {
   &__item {
     display: flex;

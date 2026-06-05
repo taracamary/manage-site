@@ -1,3 +1,5 @@
+@use "../../../scss/layers/tokens" as *;
+
 .form {
   width: 100%;
   padding: rem-calc(40) 0 rem-calc(38);

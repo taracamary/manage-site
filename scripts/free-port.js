@@ -1,7 +1,3 @@
-const { execSync } = require("child_process");
-
-const port = process.argv[2] || "8080";
-
 function freePortOnWindows() {
   try {
     const output = execSync(`netstat -ano | findstr :${port}`, {
@@ -13,45 +9,18 @@ function freePortOnWindows() {
 
     output
       .split(/\r?\n/)
-      .filter((line) => line.includes("LISTENING"))
+      .filter((line) => line.trim().length > 0)
       .forEach((line) => {
-        const pid = line.trim().split(/\s+/).pop();
-        if (pid && pid !== "0") {
+        const parts = line.trim().split(/\s+/);
+        const pid = parts[parts.length - 1];
+        if (pid && pid !== "0" && !isNaN(pid)) {
           pids.add(pid);
         }
       });
 
     pids.forEach((pid) => {
-      execSync(`taskkill //F //PID ${pid}`, { stdio: "ignore" });
+      execSync(`taskkill /F /PID ${pid}`, { stdio: "ignore" });
       console.log(`Freed port ${port} (stopped PID ${pid})`);
     });
-  } catch (error) {
-    // Port is already free or netstat found nothing.
-  }
-}
-
-function freePortOnUnix() {
-  try {
-    const output = execSync(`lsof -ti tcp:${port}`, {
-      encoding: "utf8",
-      stdio: ["ignore", "pipe", "ignore"],
-    });
-
-    output
-      .split(/\r?\n/)
-      .map((pid) => pid.trim())
-      .filter(Boolean)
-      .forEach((pid) => {
-        execSync(`kill -9 ${pid}`, { stdio: "ignore" });
-        console.log(`Freed port ${port} (stopped PID ${pid})`);
-      });
-  } catch (error) {
-    // Port is already free or lsof found nothing.
-  }
-}
-
-if (process.platform === "win32") {
-  freePortOnWindows();
-} else {
-  freePortOnUnix();
+  } catch (error) {}
 }

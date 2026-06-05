@@ -1,3 +1,5 @@
+@use "../../../scss/layers/tokens" as *;
+
 .search {
   width: 100%;
   padding: rem-calc(7) 0 rem-calc(7) rem-calc(30);

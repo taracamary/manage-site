@@ -1,10 +1,5 @@
-@import "functions";
-@import "variables";
-@import "mixins";
-
-@import "fonts";
-@import "base";
-@import "shared";
-
-@import "pages";
-@import "components";
+@use "layers/fonts";
+@use "layers/base";
+@use "shared";
+@use "pages";
+@use "components";

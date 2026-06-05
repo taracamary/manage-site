@@ -1,3 +1,5 @@
+@use "../../../scss/layers/tokens" as *;
+
 .checkbox {
   position: relative;
   padding-left: rem-calc(36);

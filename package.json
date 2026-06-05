@@ -8,12 +8,12 @@
   "keywords": [],
   "repository": {},
   "scripts": {
-    "prestart": "node scripts/free-port.js 8080",
+    "prestart": "node scripts/free-port.js 8080 && node scripts/copy-public.js",
     "start": "npm run start-dev-server",
     "start-dev-server": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server --config ./webpack/configs --progress --colors --watch",
     "build": "npm run build-website",
     "build-website": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack --config ./webpack/configs --env.prod --progress --colors",
-    "postbuild": "node -e \"require('fs').copyFileSync('dist/homepage.html','dist/index.html')\"",
+    "postbuild": "node scripts/copy-public.js && node -e \"require('fs').copyFileSync('dist/homepage.html','dist/index.html')\"",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
@@ -47,7 +47,7 @@
     "raw-loader": "1.0.0",
     "resolve-url-loader": "3.1.1",
     "sass": "^1.89.2",
-    "sass-loader": "8.0.0",
+    "sass-loader": "^8.0.0",
     "style-loader": "1.0.1",
     "uglifyjs-webpack-plugin": "2.2.0",
     "webpack": "4.41.2",

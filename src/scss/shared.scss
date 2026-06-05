@@ -1,3 +1,5 @@
+@use "functions" as *;
+
 .container {
   width: 100%;
   max-width: rem-calc(1188);

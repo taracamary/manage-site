@@ -40,6 +40,10 @@ var DevServerConfig = function (srcPath) {
             },
             devServer: {
                 overlay: true,
+                contentBase: [
+                    path.join(srcPath, "../dist"),
+                    path.join(srcPath, "../public")
+                ],
                 watchContentBase: true,
                 host: "0.0.0.0",
                 port: 8080,
