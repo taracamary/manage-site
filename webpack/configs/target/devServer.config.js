@@ -41,7 +41,11 @@ var DevServerConfig = function (srcPath) {
             devServer: {
                 overlay: true,
                 watchContentBase: true,
-                port: 8080
+                host: "0.0.0.0",
+                port: 8080,
+                public: "localhost:8080",
+                open: true,
+                openPage: "homepage.html"
             },
             module: {
                 rules: [{

@@ -24,11 +24,24 @@ __webpack_require__(/*! ./js/frontend */ 1).init();
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports) {
 
-function Frontend() {
-  this.init = function () {};
+function initSocialsDropdown() {
+  var dropdown = document.querySelector(".js-socials");
+  var toggleButton = document.querySelector(".js-socials__item--dropdown");
+  if (!dropdown || !toggleButton) return;
+  toggleButton.addEventListener("click", function (e) {
+    e.stopPropagation();
+    dropdown.classList.toggle("socials--open");
+  });
+  document.addEventListener("click", function () {
+    dropdown.classList.remove("socials--open");
+  });
 }
 
-module.exports = new Frontend();
+module.exports = {
+  init: function init() {
+    initSocialsDropdown();
+  }
+};
 
 /***/ }),
 /* 2 */

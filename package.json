@@ -8,10 +8,13 @@
   "keywords": [],
   "repository": {},
   "scripts": {
-    "start-dev-server": "webpack-dev-server --progress --colors --open --watch --host 0.0.0.0",
+    "prestart": "node scripts/free-port.js 8080",
+    "start": "npm run start-dev-server",
+    "start-dev-server": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server --config ./webpack/configs --progress --colors --watch",
+    "build": "npm run build-website",
     "build-website": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack --config ./webpack/configs --env.prod --progress --colors",
-    "postbuild": "mv dist/HomePage.html dist/index.html",
-    "predeploy": "yarn run build-website",
+    "postbuild": "node -e \"require('fs').copyFileSync('dist/homepage.html','dist/index.html')\"",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "babel": {

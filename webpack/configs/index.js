@@ -41,11 +41,9 @@ module.exports = function (env) {
         ? new DevelopmentConfig().extend(baseConfig)
         : new ProductionConfig().extend(baseConfig);
 
-    var configs = [config];
-
     if (!isProd) {
-        configs.push(new DevServerConfig(srcPath).extend(new BaseConfig()));
+        config = new DevServerConfig(srcPath).extend(config);
     }
 
-    return configs;
+    return [config];
 };

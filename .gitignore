@@ -1,6 +1,9 @@
-# See https://help.github.com/articles/ignoring-files for more about ignoring files.
+# See https://help.github.com/articles/ignoring-files for more about ignoring files
 
 node_modules/
+
+# Build output — generated from source via `npm run build`, never edited by hand
+dist/
 
 .idea/
 .vscode/
